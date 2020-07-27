@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -40,8 +40,7 @@ namespace DiscordReactions
             }
             catch (WebException ex)
             {
-                string response = new StreamReader(ex.Response.GetResponseStream()).ReadToEnd();
-                Console.WriteLine(response);
+                Console.WriteLine(ex);
                 return false;
             }
 
@@ -65,8 +64,7 @@ namespace DiscordReactions
             }
             catch (WebException ex)
             {
-                string response = new StreamReader(ex.Response.GetResponseStream()).ReadToEnd();
-                Console.WriteLine(response);
+                Console.WriteLine(ex);
                 return false;
             }
         }
